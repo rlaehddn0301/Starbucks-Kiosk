@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/7c9030ac2f.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="">
+        <div class="container">
+            <header>
+                <div class="title">
+                    <img src="Css/starbucks_logo.png" width="100px" alt="">StarBucks</div>
+
+                    <div class="icon-cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="product_id">0</span>
+                    </div>
+            </header>
+            
+            <div class="ListMenu">
+                <div class="listProduct"></div>
+            </div>
+        </div>
+        
+        <div class="cartTab">
+            <h1>Order Cart
+            </h1>
+            <div class="ListCart">
+            </div>
+            <div class="btn">
+                <button class="Order">Order</button>
+                <button class="close">Close</button>
+            </div>
+        </div>
+        
+        <div class="modal">
+            <img src="Css/starbucks_logo.png" alt="">
+            <div class="modal-content">
+            </div>
+        </div>
+        
+        <!-- 주문이 없습니다 모달 -->
+        <div class="modal no-order-modal noshow">
+            <img src="Css/starbucks_logo.png" alt="">
+            <div class="modal-content">
+                <p>메뉴를 선택하세요</p>
+                <button class="no-order-close-button close-button">닫기</button>
+            </div>
+        </div>
+
+        <div class="modal receipt-modal noshow">
+            <img src="Css/starbucks_logo.png" alt="">
+            <div class="modal-content">
+                <p>결제가 완료되었습니다. 영수증을 출력하시겠습니까?</p>
+                <!-- 추가된 부분: 주문 내용 표시 -->
+                <div id="order-details">
+                    <!-- 주문 내용이 여기에 표시됩니다. -->
+                </div>
+            </div>
+                <p>총 금액: <span id="total-amount"></span></p>
+                <p>대기번호: <span id="order-number"></span></p>
+                <button class="print-button" onclick="print();">예</button>
+                <button class="no-print-button">아니요</button>
+            </div>
+                
+
+
+        <script src="app.js"></script>
+        <script src="product.json"></script>
+    </body>
+    </html>
